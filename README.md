@@ -1,4 +1,7 @@
-# Auction Air Auction
+# Bixos Air Auction
+
+> the project generally sells 4 air conditioners at auction, but this auction continues all the time, so you can't own any air conditioner forever and everything working with web3
+
 
 
 ## Technologies
