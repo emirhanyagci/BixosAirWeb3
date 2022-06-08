@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Mulish:wght@200;300;400;500;600&family=Orbitron:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Mulish', sans-serif;
+}
+
+.airStatus::before{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #0090d5;
+    background-image: linear-gradient(-234deg, #29aceb 0%, #0090d5 100%);
+    box-shadow: 0 0 51px rgb(0 144 213 / 74%);
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 25px;
+    color: white;
+}
+.air-1::before{
+    content: "A";
+}
+.air-2::before{
+    content: "B";   
+}
+.air-3::before{
+    content: "C";
+}
+.air-4::before{
+    content: "D";
+}
+.walletAlert{
+    
+    animation-iteration-count: 1;
+    animation-timing-function: lienar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes showFTop{
+    0%{
+        top: -80px;
+        opacity: 0;
+    }
+    100%{
+        top: 30px;
+        opacity: 1;
+    }
+}
+@keyframes hideFTop{
+    0%{
+        top: 30px;
+        opacity: 1;
+    }
+    100%{
+        top: -80px;
+        opacity: 0;
+    }
+}
+.setDegBtn:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Emirhan Yağcı">
+    <meta name="author" content="Eren Yılmaz">
+    <meta name="author" content="Yunus Emre GÖk">
+    <meta name="author" content="Oğuz Tumay">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/coinImg.png" />
+    <link rel="stylesheet" href="output.css">
+    <title>Bixos Air</title>
+</head>
+<!--
+    background-image: linear-gradient( 90deg,rgba(0,163,224,0.75) 0%,rgba(30,33,57,0) 100% );
+-->
+
+<body class="bg-[#1f2641]">
+    <!--
+       reject #f13131;:
+       pending:#ffbf00;
+       succes :#21ce67
+   -->
+    <div class="walletAlert fixed top-[-80px] opacity-0 z-50 left-1/2 translate-x-[-50%] text-white px-4 py-3 rounded-md"
+        role="alert" style="background-color:#edb036 ;">
+        <strong class="font-bold">Message <br></strong>
+        <span class="block sm:inline">You Should Connect With Wallet</span>
+        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+            <svg class="closeWalletAlertBtn fill-current h-6 w-6 text-white" role="button"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <title>Close</title>
+                <path
+                    d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+            </svg>
+        </span>
+    </div>
+
+    <nav
+        class="w-full h-20 flex justify-between items-center bg-slate-800 bg-gradient-to-l from-[rgba(0,163,224,0.75)] to-[rgba(30,33,57,0) 100% )] px-16 py-11 sm:px-5 sm:py-6 2sm:flex-col 2sm:justify-center 2sm:py-0 2sm:h-32">
+        <div class="navLogo">
+            <img src="img/bixos-logo-white.png" alt=""
+                class="w-56 pointer-events-none sm:w-[200px] lg:min-w-22 2sm:w-[200px]">
+        </div>
+        <div class="flex items-center">
+            <div class="mr-4 cursor-pointer w-44 text-center text-white font-bold  py-3 rounded-2xl transition-all duration-500 hover:translate-y-[-8px] sm:px-3 sm:py-3 sm:text-sm md:w-28 md:mr-2 ApproveBtn"
+                style="background-image: linear-gradient(-234deg, #6ae472 0%, #4bc253 100%);
+            box-shadow: 0 0 51px rgba(75 194 83 / 74%); display:none;">
+            
+                Approve
+            </div>
+            <div class="cursor-pointer w-44 text-center whitespace-nowrap text-white font-bold py-3 rounded-2xl transition-all duration-500 hover:translate-y-[-8px] sm:px-3 sm:py-3 sm:text-sm 2sm:text-[12px] md:w-28 md:text-sm MMBtn"
+                style="background-color: #fa8936;
+            background-image: linear-gradient(-234deg, #f06c08 0%, #e2660e 100%);
+            box-shadow: 0 0 51px rgba(246, 109, 10, 0.94); ">Connect Wallet</div>
+
+        </div>
+    </nav>
+
+
+    <section class="mt-14">
+        <!--FIRST AIR CONTAİNER-->
+        <div class="w-full flex justify-center mb-16  lg:flex-col lg:items-center">
+            <!--AIR ITEM-->
+            <div class="w-[500px] mr-28 lg:mr-0 sm:w-[80%] ">
+                <div class="bg-slate-100  w-full h-56 rounded-xl relative airStatus air-1 md:min-h-[16rem] 2sm:min-h-[20rem]"
+                    style="box-shadow: 0 0 51px rgb(0 144 213 / 54%);">
+                    <!--SVG BG AREA-->
+                    <div class="w-full h-full flex items-center justify-center rounded-xl overflow-hidden absolute">
+                        <img class="pointer-events-none sm:min-w-[115%]" src="img/airBgItem.svg" alt=""
+                            style="height: 500px;">
+                    </div>
+
+                    <div
+                        class="airDegree w-[110px] h-[110px] flex items-center justify-center font-bold text-4xl text-white absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+                        <span class="currentDeg ml-1 inline-block sm:text-[27px]"></span> <sup
+                            class="text-3xl text-gray-100 inline-block mb-[-10px] sm:mb-[-13px]">°</sup>
+                    </div>
+
+                    <div class="absolute bottom-0 w-full flex-wrap p-4 flex justify-between sm:flex-col">
+                        <div class="flex items-center text-3xl text-white sm:items-start">
+                            <img src="img/coinImg.png" alt="" width="40px" class="mr-1 pointer-events-none">
+                            <div
+                                class="currentOffer font-digital self-center w-full break-all 2sm:text-xl sm:items-start mr-8">
+                            </div>
+
+                        </div>
+                        <div class="self-center font-bold text-white sm:items-start sm:w-full sm:self-start">Owner:<span
+                                class="airOwnerId font-normal "></span> </div>
+                    </div>
+
+                </div>
+                <!--RANGE AREA-->
+                <div class="w-full flex flex-col items-center rangeSetAreas text-white">
+                    <!--wiill be flex then click-->
+                    <div class="w-full   justify-around items-center mt-5 px-10 setAirRange" style="display:none ;">
+                        <div class="text-2xl font-digital">16</div>
+                        <div class="w-[50%] rangeInpWrap">
+                            <input class="rangeInp w-[100%]" type="range" min="16" max="32">
+                        </div>
+                        <div class="text-2xl font-digital">32</div>
+                    </div>
+                    <div class="changeOffer w-full flex justify-center mt-5 ">
+                        <!--set min by last offer-->
+                        <input
+                            class="changeOfferInp w-2/5 font-bold rounded-lg bg-transparent outline-none border-none px-4 py-2"
+                            style="display: none; box-shadow: 0 0 51px rgb(0 144 213 / 74%); " type="number" min="1"
+                            max="999999999999999999999999999999999999999999999">
+                    </div>
+                    <div class="w-full flex justify-center items-start">
+                        <div class="cancelDegBtn w-2/5 text-center rounded-xl px-4 py-3 bg-red-600 mt-5 cursor-pointer mr-6 items-center justify-center sm:text-sm "
+                            style="display:none; box-shadow: 0 0 51px rgb(220 38 38 / 94%)">Cancel Transaction</div>
+                        <div class="setDegBtn no- w-2/5 text-center rounded-xl px-4 py-3 bg-orange-500 mt-5 cursor-pointer items-center justify-center flex sm:text-sm lg:mb-16"
+                            style="box-shadow: 0 0 51px rgb(246 109 10 / 94%);">
+
+                            Set as Owner</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--AIR ITEM-->
+            <div class="w-[500px] lg:mr-0 sm:w-[80%]">
+                <div class="bg-slate-100  w-full h-56 rounded-xl relative airStatus air-2 md:min-h-[16rem] 2sm:min-h-[20rem]"
+                    style="box-shadow: 0 0 51px rgb(0 144 213 / 54%);">
+                    <!--SVG BG AREA-->
+                    <div class="w-full h-full flex items-center justify-center rounded-xl overflow-hidden absolute ">
+                        <img src="img/airBgItem.svg" alt="" class="pointer-events-none sm:min-w-[115%]"
+                            style="height: 500px;">
+                    </div>
+
+                    <div
+                        class="airDegree w-[110px] h-[110px] flex items-center justify-center font-bold text-4xl text-white absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+                        <span class="currentDeg ml-1 inline-block sm:text-[27px]"></span> <sup
+                            class="text-3xl text-gray-100 inline-block mb-[-10px] sm:mb-[-13px]">°</sup>
+                    </div>
+
+                    <div class="absolute bottom-0 w-full p-4 flex flex-wrap mt-96 justify-between sm:flex-col">
+                        <div class="flex items-center text-3xl text-white sm:items-start">
+                            <img src="img/coinImg.png" alt="" width="40px" class="mr-1 pointer-events-none">
+                            <div
+                                class="currentOffer font-digital break-all self-center w-full 2sm:text-xl sm:items-start mr-8">
+                            </div>
+
+                        </div>
+                        <div class="self-center font-bold text-white sm:items-start sm:w-full sm:self-start">Owner:<span
+                                class="airOwnerId font-normal "></span> </div>
+                    </div>
+
+                </div>
+                <!--RANGE AREA-->
+                <div class="w-full flex flex-col items-center rangeSetAreas text-white">
+                    <!--wiill be flex then click-->
+                    <div class="w-full   justify-around items-center mt-5 px-10 setAirRange" style="display:none;">
+                        <div class="text-2xl font-digital ">16</div>
+                        <div class="w-[50%] rangeInpWrap">
+                            <input class="rangeInp w-[100%]" type="range" min="16" max="32">
+                        </div>
+                        <div class="text-2xl font-digital">32</div>
+                    </div>
+                    <div class="changeOffer w-full flex justify-center mt-5 ">
+                        <!--set min by last offer-->
+                        <input
+                            class="changeOfferInp w-2/5 font-bold rounded-lg bg-transparent outline-none border-none px-4 py-2"
+                            style="display: none; box-shadow: 0 0 51px rgb(0 144 213 / 74%); " type="number" min="1"
+                            max="999999999999999999999999999999999999999999999">
+                    </div>
+                    <div class="w-full flex justify-center">
+                        <div class="cancelDegBtn w-2/5 text-center rounded-xl px-4 py-3 bg-red-600 mt-5 cursor-pointer mr-6 items-center justify-center sm:text-sm"
+                            style="display:none; box-shadow: 0 0 51px rgb(220 38 38 / 94%)">Cancel Transaction</div>
+                        <div class="setDegBtn w-2/5 text-center rounded-xl px-4 py-3 bg-orange-500 mt-5 cursor-pointer items-center justify-center flex sm:text-sm"
+                            style="box-shadow: 0 0 51px rgb(246 109 10 / 94%);">Set as Owner</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--TWICE AIR CONTAİNER-->
+        <div class="w-full flex justify-center lg:flex-col lg:items-center">
+            <!--AIR ITEM-->
+            <div class="w-[500px] mr-28 lg:mr-0 sm:w-[80%]">
+                <div class="bg-slate-100  w-full h-56 rounded-xl relative airStatus air-3 md:min-h-[16rem] 2sm:min-h-[20rem]"
+                    style="box-shadow: 0 0 51px rgb(0 144 213 / 54%);">
+                    <!--SVG BG AREA-->
+                    <div class="w-full h-full flex items-center justify-center rounded-xl overflow-hidden absolute">
+                        <img src="img/airBgItem.svg" alt="" class="pointer-events-none sm:min-w-[115%]"
+                            style="height: 500px;">
+                    </div>
+
+                    <div
+                        class="airDegree w-[110px] h-[110px] flex items-center justify-center font-bold text-4xl text-white absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+                        <span class="currentDeg ml-1 inline-block sm:text-[27px]"></span> <sup
+                            class="text-3xl text-gray-100 inline-block mb-[-10px] sm:mb-[-13px]">°</sup>
+                    </div>
+
+                    <div class="absolute bottom-0 w-full p-4 flex flex-wrap justify-between sm:flex-col">
+                        <div class="flex items-center text-3xl text-white sm:items-start">
+                            <img src="img/coinImg.png" alt="" width="40px" class="mr-1 pointer-events-none">
+                            <div
+                                class="currentOffer font-digital break-all self-center w-full 2sm:text-xl sm:items-start mr-8">
+                            </div>
+
+                        </div>
+                        <div class="self-center font-bold text-white sm:items-start sm:w-full sm:self-start">Owner:<span
+                                class="airOwnerId font-normal "></span> </div>
+                    </div>
+
+                </div>
+                <!--RANGE AREA-->
+                <div class="w-full flex flex-col items-center rangeSetAreas text-white">
+                    <!--wiill be flex then click-->
+                    <div class="w-full justify-around items-center mt-5 px-10 setAirRange" style="display:none;">
+                        <div class="text-2xl font-digital ">16</div>
+                        <div class="w-[50%] rangeInpWrap">
+                            <input class="rangeInp w-[100%]" type="range" min="16" max="32">
+                        </div>
+                        <div class="text-2xl font-digital ">32</div>
+                    </div>
+                    <div class="changeOffer w-full flex justify-center mt-5 ">
+                        <!--set min by last offer-->
+                        <input
+                            class="changeOfferInp w-2/5 font-bold rounded-lg bg-transparent outline-none border-none px-4 py-2"
+                            style="display: none; box-shadow: 0 0 51px rgb(0 144 213 / 74%); " type="number" min="1"
+                            max="999999999999999999999999999999999999999999999">
+                    </div>
+                    <div class="w-full flex justify-center items-start">
+                        <div class="cancelDegBtn w-2/5 text-center rounded-xl px-4 py-3 bg-red-600 mt-5 cursor-pointer mr-6 items-center justify-center sm:text-sm"
+                            style="display:none; box-shadow: 0 0 51px rgb(220 38 38 / 94%)">Cancel Transaction</div>
+                        <div class="setDegBtn w-2/5 text-center rounded-xl px-4 py-3 bg-orange-500 mt-5 cursor-pointer items-center justify-center flex sm:text-sm lg:mb-16"
+                            style="box-shadow: 0 0 51px rgb(246 109 10 / 94%);">Set as Owner</div>
+                    </div>
+                </div>
+            </div>
+            <!--AIR ITEM-->
+            <div class="w-[500px] lg:mr-0 sm:w-[80%]">
+                <div class="bg-slate-100  w-full h-56 rounded-xl relative airStatus air-4 md:min-h-[16rem] 2sm:min-h-[20rem]"
+                    style="box-shadow: 0 0 51px rgb(0 144 213 / 54%);">
+                    <!--SVG BG AREA-->
+                    <div class="w-full h-full flex items-center justify-center rounded-xl overflow-hidden absolute">
+                        <img src="img/airBgItem.svg" alt="" class="pointer-events-none sm:min-w-[115%]"
+                            style="height: 500px;">
+                    </div>
+
+                    <div
+                        class="airDegree w-[110px] h-[110px] flex items-center justify-center font-bold text-4xl text-white absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+                        <span class="currentDeg ml-1 inline-block sm:text-[27px]"></span> <sup
+                            class="text-3xl text-gray-100 inline-block mb-[-10px] sm:mb-[-13px]">°</sup>
+                    </div>
+
+                    <div class="absolute bottom-0 flex-wrap w-full p-4 flex justify-between sm:flex-col">
+                        <div class="flex items-center text-3xl text-white sm:items-start">
+                            <img src="img/coinImg.png" alt="" width="40px" class="mr-1 pointer-events-none">
+                            <div
+                                class="currentOffer font-digital break-all self-center w-full 2sm:text-xl sm:items-start mr-8">
+                            </div>
+
+                        </div>
+                        <div class="self-center font-bold text-white sm:items-start sm:w-full sm:self-start">Owner:<span
+                                class="airOwnerId font-normal "></span> </div>
+                    </div>
+
+                </div>
+                <!--RANGE AREA-->
+                <div class="w-full flex flex-col items-center rangeSetAreas text-white">
+                    <!--wiill be flex then click-->
+                    <div class="w-full   justify-around items-center mt-5 px-10 setAirRange" style="display:none;">
+                        <div class="text-2xl font-digital ">16</div>
+                        <div class="w-[50%] rangeInpWrap">
+                            <input class="rangeInp w-[100%]" type="range" min="16" max="32">
+                        </div>
+                        <div class="text-2xl font-digital">32</div>
+                    </div>
+                    <div class="changeOffer w-full flex justify-center mt-5 ">
+                        <!--set min by last offer-->
+                        <input
+                            class="changeOfferInp w-2/5 font-bold rounded-lg bg-transparent outline-none border-none px-4 py-2"
+                            style="display:none; box-shadow: 0 0 51px rgb(0 144 213 / 74%); " type="number" min="1"
+                            max="999999999999999999999999999999999999999999999">
+                    </div>
+                    <div class="w-full flex justify-center items-start">
+                        <div class="cancelDegBtn w-2/5 text-center rounded-xl px-4 py-3 bg-red-600 mt-5 cursor-pointer mr-6 items-center justify-center sm:text-sm"
+                            style="display:none; box-shadow: 0 0 51px rgb(220 38 38 / 94%)">Cancel Transaction</div>
+                        <div class="setDegBtn w-2/5 text-center rounded-xl px-4 py-3 bg-orange-500 mt-5 cursor-pointer items-center justify-center flex sm:text-sm lg:mb-16"
+                            style="box-shadow: 0 0 51px rgb(246 109 10 / 94%);">Set as Owner</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="web3/dist/web3.min.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
