@@ -11,7 +11,7 @@
 - Tailwind
 ## Before Start
 
--[Get Eth for Kovan Network](https://faucets.chain.link)
+- [Get Eth for Kovan Network](https://faucets.chain.link)
 
 ## QuickStart
 
