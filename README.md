@@ -24,6 +24,8 @@ With Yarn:
 ```bash
 $ yarn add mosha-vue-toastify
 ```
+Render Tailwind:
+
 ```
 npm/yarn run tailwind
 ```
