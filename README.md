@@ -12,6 +12,21 @@
 - HTML
 - CSS
 - Tailwind
+## Start Setup
+With NPM:
+
+```bash
+$ npm install mosha-vue-toastify
+```
+
+With Yarn:
+
+```bash
+$ yarn add mosha-vue-toastify
+```
+```
+npm/yarn run tailwind
+```
 ## Before Start
 
 - [Get Eth for Kovan Network](https://faucets.chain.link)
