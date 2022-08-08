@@ -48,4 +48,4 @@ npm/yarn run tailwind
 [Go Demo](https://airdemoemirhan.netlify.app)
 
 
-## Developed by Emithan Yağcı
+## Developed by Emirhan Yağcı
