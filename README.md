@@ -1,3 +1,4 @@
+## Unuseable for now because kovan testnet is down.Should change smart contracts
 # Bixos Air Auction
 
 > the project generally sells 4 air conditioners at auction, but this auction continues all the time, so you can't own any air conditioner forever and everything working with web3
@@ -16,13 +17,13 @@
 With NPM:
 
 ```bash
-$ npm install mosha-vue-toastify
+$ npm install
 ```
 
 With Yarn:
 
 ```bash
-$ yarn add mosha-vue-toastify
+$ yarn add
 ```
 Render Tailwind:
 
@@ -43,9 +44,6 @@ npm/yarn run tailwind
 
 ![DEMO IMAGE](https://github.com/emirhan-yagci/BuyAirWithWeb3/blob/main/images/main.png)
 
-
-
-[Go Demo](https://airdemoemirhan.netlify.app)
 
 
 ## Developed by Emirhan Yağcı
