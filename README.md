@@ -23,7 +23,7 @@ $ npm install
 With Yarn:
 
 ```bash
-$ yarn add
+$ yarn
 ```
 Render Tailwind:
 
